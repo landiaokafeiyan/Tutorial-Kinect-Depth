@@ -50,7 +50,7 @@ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-armhf
 cmake -DBUILD_SHARED_LIBS=OFF ..
 At the end of Cmake, you shall see Java and OpenNI parameters as below:
 
-![alt tag](https://github.com/dBeker/Kinect-Depth/blob/master/Images/output.PNG)
+![alt tag](https://github.com/dBeker/Kinect-Depth/blob/master/Images/output.png)
 
 The rest of the parameters may vary according to your needs.
 Now, we can use make to build OpenCV according to our configuration
