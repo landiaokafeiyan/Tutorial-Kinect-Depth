@@ -6,9 +6,10 @@ and
 http://docs.opencv.org/doc/user_guide/ug_highgui.html
 
 ## Notation:
-panda#     Refers to the target system (PandaBoard)
-host#        Refers to the host system (PC)
-Requirements:
+>panda     Refers to the target system (PandaBoard)
+>host      Refers to the host system (PC)
+
+## Requirements:
 OpenJDK v6-v7 (sudo apt-get install default-jdk)
 Ant (sudo apt-get install ant)
 Python v2.6+ (sudo apt-get install python or sudo apt-get update python)
@@ -42,10 +43,14 @@ Open CMakeLists.txt file and allow OpenNI.
 >sudo nano CMakeLists.txt 
 >At OpenCV Cmake Options, find the line containing OpenNI and change OFF value to ON
 
+![alt tag](https://github.com/dBeker/Kinect-Depth/blob/master/Images/OpenNI.PNG)
+
 The trick comes here. As we are using OpenJDK, JAVA_HOME path may be missing eventhough you can type and use "java" command from terminal. That's why we need to set JAVA_HOME path.
 export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-armhf
 cmake -DBUILD_SHARED_LIBS=OFF ..
 At the end of Cmake, you shall see Java and OpenNI parameters as below:
+
+![alt tag](https://github.com/dBeker/Kinect-Depth/blob/master/Images/output.PNG)
 
 The rest of the parameters may vary according to your needs.
 Now, we can use make to build OpenCV according to our configuration
